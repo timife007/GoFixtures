@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">GoFixtures</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="english_premier_league">English Premier League</string>
+    <string name="england">England</string>
+    <string name="preferences">Preferences</string>
+    <string name="competitions">Competitions</string>
+    <string name="empty_list">Empty List</string>
+    <string name="error_occurred">Error Occurred</string>
+    <string name="follow_system_value">System Value</string>
+    <string name="system">System</string>
+    <string name="light_theme_value">Light</string>
+    <string name="dark_theme_value">Dark</string>
+    <string name="_12_12_22">12/12/22</string>
+    <string name="_17_30">17:30</string>
+    <string name="leicester_city">Leicester City</string>
+    <string name="manchester_united">Manchester United</string>
+
+</resources>
