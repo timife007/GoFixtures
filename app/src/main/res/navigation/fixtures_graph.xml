@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/venue_graph.xml"
+    android:id="@+id/fixtures_graph"
     app:startDestination="@id/competitionFragment">
 
     <fragment
@@ -21,10 +21,13 @@
         android:id="@+id/fixturesFragment"
         android:name="com.timothy.gofixtures.presentation.fixtures.FixturesFragment"
         android:label="fixtures_fragment"
-        tools:layout="@layout/fixtures_fragment" />
+        tools:layout="@layout/fixtures_fragment" >
+        <argument
+            android:name="competitionId"
+            app:argType="integer" />
+    </fragment>
     <fragment
         android:id="@+id/preferencesFragment"
         android:name="com.timothy.gofixtures.presentation.preferences.PreferencesFragment"
-        android:label="fragment_preferences"
-        tools:layout="@layout/fragment_preferences" />
+        android:label="@string/preferences" />
 </navigation>

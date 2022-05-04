@@ -13,12 +13,11 @@ import kotlinx.parcelize.RawValue
 data class CacheCompetition(
     @PrimaryKey
     @NonNull
-    @ColumnInfo(name = "id")
     val competitionId: Int,
 
     @Embedded
     val area: CacheArea,
-    @ColumnInfo(name = "name")
+    @ColumnInfo(name = "competitionName")
     val name: String,
 
     @ColumnInfo(name = "code")

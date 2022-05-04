@@ -7,7 +7,9 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.PreferenceFragmentCompat
 import com.timothy.gofixtures.R
 import com.timothy.gofixtures.util.SharedPrefHelper
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class PreferencesFragment : PreferenceFragmentCompat(),
     SharedPreferences.OnSharedPreferenceChangeListener {
 

@@ -9,7 +9,7 @@ import com.timothy.gofixtures.databinding.CompetitionItemBinding
 import com.timothy.gofixtures.domain.model.Competition
 
 class CompetitionAdapter (private val clickListener: CompClickListener) :
-    ListAdapter<Competition, CompetitionAdapter.CompViewHolder>(VenuesDiffUtil()) {
+    ListAdapter<Competition, CompetitionAdapter.CompViewHolder>(CompetitionDiffUtil()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CompViewHolder {
         return CompViewHolder.from(parent)
@@ -39,7 +39,7 @@ class CompetitionAdapter (private val clickListener: CompClickListener) :
         }
     }
 
-    class VenuesDiffUtil : DiffUtil.ItemCallback<Competition>() {
+    class CompetitionDiffUtil : DiffUtil.ItemCallback<Competition>() {
         override fun areItemsTheSame(oldItem: Competition, newItem: Competition): Boolean {
             return oldItem.name == newItem.name
         }

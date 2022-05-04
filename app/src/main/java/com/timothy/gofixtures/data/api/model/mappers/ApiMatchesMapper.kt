@@ -3,8 +3,9 @@ package com.timothy.gofixtures.data.api.model.mappers
 import com.timothy.gofixtures.data.api.model.apimatches.ApiMatch
 import com.timothy.gofixtures.data.api.model.apimatches.ApiSeason
 import com.timothy.gofixtures.domain.model.*
+import javax.inject.Inject
 
-class ApiMatchesMapper:ApiMapper<List<ApiMatch>,List<Match>> {
+class ApiMatchesMapper @Inject constructor():ApiMapper<List<ApiMatch>,List<Match>> {
     override fun mapToDomain(apiModel: List<ApiMatch>): List<Match> {
         return apiModel.map {
             Match(

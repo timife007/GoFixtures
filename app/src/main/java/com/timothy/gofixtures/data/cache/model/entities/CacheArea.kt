@@ -3,6 +3,6 @@ package com.timothy.gofixtures.data.cache.model.entities
 import com.google.gson.annotations.SerializedName
 
 data class CacheArea (
-    val id: Int,
-    val name: String
+    val areaId: Int,
+    val areaName: String
         )

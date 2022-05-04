@@ -4,8 +4,9 @@ import com.timothy.gofixtures.data.api.model.apicompetition.ApiCompetition
 import com.timothy.gofixtures.domain.model.Area
 import com.timothy.gofixtures.domain.model.Competition
 import com.timothy.gofixtures.domain.model.CurrentSeason
+import javax.inject.Inject
 
-class ApiCompetitionMapper(private val apiMatchesMapper: ApiMatchesMapper) : ApiMapper<List<ApiCompetition>,List<Competition>>{
+class ApiCompetitionMapper @Inject constructor() : ApiMapper<List<ApiCompetition>,List<Competition>>{
     override fun mapToDomain(apiModel: List<ApiCompetition>): List<Competition> {
         return apiModel.map {
             Competition(

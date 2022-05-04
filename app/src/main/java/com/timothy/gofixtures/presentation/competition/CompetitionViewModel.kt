@@ -1,5 +1,6 @@
 package com.timothy.gofixtures.presentation.competition
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -25,9 +26,18 @@ class CompetitionViewModel @Inject constructor(
     private val _loading = MutableLiveData<Boolean>()
     val loading = _loading.asLiveData()
 
+    private val _navigateToSelectedCompetition = MutableLiveData<Int>()
+    val navigateToSelectedCompetition: LiveData<Int>
+        get() = _navigateToSelectedCompetition
+
+
     private val _dataFetchState = MutableLiveData<Boolean>()
     val dataFetchState = _dataFetchState.asLiveData()
 
+
+    init {
+        getCompetition()
+    }
 
     /**
      * This is a caching strategy, checks the local database for data, if empty it calls
@@ -106,5 +116,9 @@ class CompetitionViewModel @Inject constructor(
                 }
             }
         }
+    }
+
+    fun navigateToSelectedCompetition(id:Int){
+        _navigateToSelectedCompetition.value = id
     }
 }
